@@ -1,0 +1,53 @@
+Operador bit-a-bit
+ 
+Operador Bit-a-Bit & (AND – E)
+//O operador bit-a-bit & (and ou e) compara dois valores utilizando sua representação binária e retorna um novo valor.
+<?php
+$a = 10;  // 00001010
+$b = 105; // 01101001
+$c = $a & $b; // 01101001 & 00001010 = 00001000
+echo $c; // Exibe 8 Na tela // 00001000
+?>
+----------------------------------------------------------------------------------------------
+Operador Bit-a-Bit | (OR – OU) 
+// O operador bit-a-bit | (or / ou) comparara cada um dos bits do valor e retorna um novo valor
+<?php
+$a = 10;  // 00001010
+$b = 105; // 01101001
+$c = $a | $b; // 01101001 & 00001010 = 01101011
+echo $c; // Exibe 107 Na tela // 01101011
+?>
+----------------------------------------------------------------------------------------------
+Operador Bit-a-Bit ^ (XOR)
+//O operador bit-a-bit ^ (xor) comparara cada um dos bits do valor e retorna um novo valor.
+<?php
+$a = 10;  // 00001010
+$b = 105; // 01101001
+$c = $a ^ $b; // 01101001 & 00001010 = 01100011
+echo $c; // Exibe 99 Na tela // 01100011
+?>
+----------------------------------------------------------------------------------------------
+// Operador Bit-a-Bit ~ (Not ou Não)
+// O operador ~ (não) inverte a posição dos bits ativos para não ativo em um único valor
+<?php
+$a = 10;  // 00000000000000000000000000001010
+$a = ~$a; // 11111111111111111111111111110101
+echo $a;  // Exibe -11 na tela
+?>
+----------------------------------------------------------------------------------------------
+//Operador Bit-a-Bit >> (right shift)
+//O operador bit-a-bit >> (right shift) desloca bits para a direita. Cada deslocamento para a direita, é o mesmo que dividir o valor por 2.
+<?php
+$a = 10; // 1010 
+// Deslocando 1 bit para a direita
+$a = $a >> 1; // 101
+echo $a; // Exibe 5 na tela
+?>----------------------------------------------------------------------------------------------
+//Operador Bit-a-Bit >> (left shift)
+//O operador bit-a-bit << (left shift) desloca bits para a esquerda. Cada deslocamento para a esquerda, é o mesmo que multiplicar o valor por 2.
+<?php
+$a = 10; // 1010
+// Deslocando 1 bit para a esquerda
+$a = $a << 1; // 10100 
+echo $a; // Exibe 20 na tela
+?>
