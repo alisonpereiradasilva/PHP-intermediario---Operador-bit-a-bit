@@ -1,0 +1,56 @@
+O operador & ( Bitwise AND )
+Compara dois valores utilizando suas representações binárias, retornando um novo valor, para formar esse valor de retorno cada bit 
+é comparado, retornando 1( true ) quando ambos os bits forem iguais, caso contrário  retorna 0( false ).
+Operador | ( Bitwise OR )
+Este operador compara dois valores utilizando suas representações binárias, retornando um novo valor,  
+para formar esse valor de retorno cada bit é comparado, retornando 1( true ) se um dos bits comparados forem iguais a 1, 
+caso contrário retorna 0 ( false ).
+Operador ^ ( Bitwise XOR )
+Este operador  compara dois valores utilizando suas representações binárias, retornando um novo valor,
+para formar esse valor de retorno cada bit é comparado, retornando 1( true ) quando os bits comparados forem diferentes, 
+caso contrário retorna 0( false ).
+Operador ~ ( Bitwise NOT )
+Este operador diferente dos operadores anteriores, é um operador que afeta apenas um operando, incrementando(++) 
+e invertendo seu sinal, de positivo para negativo e vice versa. 
+Operador >> ( Bitwise Right shift )
+Representação binária do valor , identificamos facilmente que os bits movimentam-se para a direita,  
+sendo o operando da direita responsável pelo número de vezes que os bits serão movimentados, 
+cada passo equivale a dividir por 2, ou seja, $a >> 3, é o mesmo que dividir $a por 2 três vezes. 
+Operador << ( Bitwise Left shift )Este operador segue a mesma linha de raciocínio do operador >>, 
+contudo ao invés de deslocar os bits para a direita, desloca os bits para a esquerda, 
+cada passo equivale a multiplicar por 2, ou seja, $a << 3, é o mesmo que multiplicar $a por 2 três vezes.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Operador Bitwise bit a bit
+
+<?php
+// Operador & comercial, compara os bits ativando e desativando bits
+$a = 5;
+$b = 6;
+echo " Binario do decimal 5 é: ";echo decbin($a);echo"<br>";
+echo " Binario do decimal  6 é : ";echo decbin($b);echo"<br>";
+$c = $a & $b;
+echo "Ativando e desativando bits: "; echo decbin($c);echo"<br>";
+//--------------------------------------------------------------------------------------------
+//Operador (or - ou) [ | ]
+$d = $a | $b;
+echo " Com Pipe, retornando novo valor: ";echo decbin($d);echo"<br>";
+//--------------------------------------------------------------------------------------------
+// Operador XOR retornando novo valor
+$e = $a ^ $b;
+echo "Operador XOR (^) novo valor: "; echo decbin($e);echo"<br>";
+//--------------------------------------------------------------------------------------------
+//Operador Nao (~)
+$f = 10;
+$f = ~$f;
+echo "Operador Nao (~) novo valor: "; echo decbin($f);echo"<br>";
+//--------------------------------------------------------------------------------------------
+// Operador Right e left shift (<< >>)
+$g = 10;
+echo "Decimal 10: "; echo decbin($g);echo"<br>";
+$g = $g >> 3;
+echo "Bit deslocado para direita: "; echo decbin($g);echo"<br>";
+$g = $g << 2;
+echo "Bia deslocado para a esquerda: "; echo decbin($g);
+?>
